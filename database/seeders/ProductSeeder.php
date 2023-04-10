@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Produto;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ProductSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Produto::create([
+            'id' => 1,
+            'name' => 'Geladeira',
+            'price' => 2900.10,
+            'category_id' => 1,
+            'description' => 'Aço escovado, Frost Free PANASONIC',
+            'image_b64' => "data:application/png;base64,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my91PMQQ8U32vlTgHI45Zcz4JgFJ8NVsmyzavkXNzn4GXWdg1SQvYHV2segSeDjmg282sU73sKBGN6bJnPV1nBzrQExryViOqClZDIWn5KBqshhqZ/BETniklyZJVamTlnUoZmng+zvWJSPBMMtSnWHW3Vwq6xBMMvcoOwW9PY38WCgCk1jd1VbvvX+2YNSsEme8ZNesgwXp4HFqksdMu97JUxIMk15bZJi6tTpATX3cL9hmsxtudd3mJICamhmdBFFvvD1jMatC5PptZ2nhMZhkNWTbYG9TEhCTvSXXBrugciIxbXk/sFfZWf+BSEiM89ccn82OVNNn3zTOdfrjstZAYVZWD2p2zX7ricBMnCTBZ6vXG9d3n4TELDfpudVpf3y3nShMlpEuThrszekPDCbnjGp2zZ5H8TBM/jK9eeCMcgoB901z9x+lo6vlxGEejXNSNacmKWEwK6MH56Q5iZsdgznFXx2hIVTqenznsjp8emIOf37kJePsnWTNKsGfmOmol77eHrnOdI5fZKznIiPYMPyKzOf37/plFG8nMZzy9fr5+Vn+9veH/K9Ynr/PifknVzsxEWo6b//kaptV411z8PcP9fH9dcvv0awAAAAASUVORK5CYII=",
+        ]);
+    }
+}
